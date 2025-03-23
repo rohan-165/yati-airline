@@ -51,6 +51,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   CustomBotton(
                     onTap: () {
                       if (_formKey.currentState!.validate()) {
+                        _formKey.currentState!.reset();
+                        _userNameController.clear();
+                        _passworController.clear();
                         getIt<NavigationService>().navigateTo(RoutesName.home);
                       }
                     },
