@@ -12,7 +12,7 @@ class ApiManager {
 
   ApiManager() {
     final options = BaseOptions(
-      baseUrl: "http://",
+      baseUrl: "https://api.yourapi.com",
       connectTimeout: const Duration(seconds: 3),
       receiveTimeout: const Duration(minutes: 1),
       headers: {

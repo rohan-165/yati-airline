@@ -24,22 +24,19 @@ class CustomBotton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenPadding(
       child: Container(
-            width: width,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(4.r),
-              color: buttonColor ?? AppColors.blackColor,
-              border: Border.all(color: borderColor ?? AppColors.blackColor),
-            ),
-            child: Text(
-              lable ?? 'Proceed',
-              style: context.textTheme.displayLarge!.copyWith(
-                color: lableColor ?? AppColors.whiteColor,
-              ),
-            ),
-          )
-          .padHorizontal(horizontal: 20.w)
-          .padVertical(vertical: 10.h)
-          .onTap(onTap),
+        width: width,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(4.r),
+          color: buttonColor ?? AppColors.blackColor,
+          border: Border.all(color: borderColor ?? AppColors.blackColor),
+        ),
+        child: Text(
+          lable ?? 'Proceed',
+          style: context.textTheme.titleLarge!.copyWith(
+            color: lableColor ?? AppColors.whiteColor,
+          ),
+        ).padHorizontal(horizontal: 20.w).padVertical(vertical: 5.h),
+      ).onTap(onTap),
     );
   }
 }
